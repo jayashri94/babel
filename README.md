@@ -2,7 +2,7 @@
 
 **1. Download**
   ```
-  git clone git@github.com:SejunKang/Cosmic_muon_simulator.git
+  git clone git@github.com:SejunKang/babel.git
   ```
 
 **2. Operate `CMAKE` to create the executable file**
