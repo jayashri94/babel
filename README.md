@@ -29,22 +29,28 @@ a. Run in UI mode
 Push the green start button on the top of the GUI screen to shoot one muon beam. If you want to shoot multiple beams, type `/run/beamOn <number>` in the UI window.
 
 b. Run in batch mode (Horizontal)
+
 I have made two different macro files for horizontal incidence and vertical incidence. To shoot the beam horizontally, use `run_hor.mac`.
 ```
 ./cosmu run_hor.mac
 ```
+
 This will automatically run the simulation without any graphic visualization. To change the number of beams, open `run.mac` and change the number in the line `/run/beamOn <number>`. You must do `make` in the `build` directory after changing anything.
 Once the simulation is done, the output ROOT file `output_hor.root` will be generated.
 
 c. Run in batch mode (Vertical)
+
 Vertical incidence is run for 15 different positions on the scintillator: -70 cm, -60 cm, -50 cm, -40 cm, -30 cm, -20 cm, -10 cm, 0 cm, 10 cm, 20 cm, 30 cm, 40 cm, 50 cm, 60 cm, 70 cm. Here, the center of the scintillator bar is placed on the origin (0 cm).
 Using `run_ver.mac`, the simulation automatically runs the 15 different positions sequentially.
+
 ```
 ./cosmu run_ver.mac
 ```
+
 Once the simulation is done, the output ROOT file `output_ver.root` will be generated.
 
 **4. Analysis**
+
 By operating the ROOT code `Addup.cc`, you can count the number of photons that reached the PMT for all beam positions.
 Also, their Horizontal/Vertical ratios are calculated.
 
