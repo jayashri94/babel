@@ -69,4 +69,5 @@ Also, their Horizontal/Vertical ratios are calculated.
 - If you modify anything of the code, you must do `make` in the `/build` directory.
 - If you make a new `.cc` or `.hh` file in the simulation set, or delete the existing file, you must do `cmake ..` before `make`.
 - If there are any problems while running the `cmake`, type `ccmake ..` in the `/build` directory and check if all the environment variables are correctly registered. You must also register your Geant4 path in `.bashrc`.
+- `Geant4` path for our masterserver is `/program/geant4/11.3.2/bin/geant4.sh`.
 - **Please call me if any other problems happen.** 
