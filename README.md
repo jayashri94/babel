@@ -47,7 +47,7 @@ or
 sbatch --nodelist=node02 noderun_hor.sh
 ```
 
-This will automatically run the simulation without any graphic visualization. To change the number of beams, open `run_hor.mac` and change the number in the line `/run/beamOn <number>`. You must do `make` in the `build` directory after changing this.
+This will automatically run the simulation without any graphic visualization. To change the number of beams, open `run_hor.mac` and change the number in the line `/run/beamOn 1000`. You must do `make` in the `build` directory after changing this.
 
 Once the simulation is done, the output ROOT file `output_hor.root` will be generated.
 
