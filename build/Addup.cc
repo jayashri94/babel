@@ -24,7 +24,7 @@ void Addup() {
 	unsigned long countver[15] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	unsigned long counthor = 0;
 
-	double reflist[15] = {-70., -60., -50., -40., -30., -20., -10., 0., 10., 20., 30., 40., 50., 60., 70.};
+	double reflist[15] = {70., 60., 50., 40., 30., 20., 10., 0., -10., -20., -30., -40., -50., -60., -70.};
 
 	for (int i = 0; i < ver_entNum; i++) {
 		vertree -> GetEntry(i);
