@@ -140,6 +140,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
      PMTLog -> SetVisAttributes(new G4VisAttributes(G4Colour::Grey()));
      auto PMTPhy = new G4PVPlacement(nullptr, G4ThreeVector(0., 0., 800 *mm), PMTLog, "PMTPhy", WorldLV, false, 0, true);
 
+/*
      //0.5 mm thick Teflon film that covers the scintillator body
 	G4Box *OutTef =  new G4Box("OutTef", 26.0 *mm, 26.0 *mm, 750.5 *mm);
 	G4Box *InTef = new G4Box("InTef", 25.5 *mm, 25.5 *mm, 750. *mm);
@@ -148,6 +149,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
      G4SubtractionSolid *TefSol = new G4SubtractionSolid("TefSol", TefSolUncut, TefCutter, nullptr, G4ThreeVector(0., 0., 750.25 *mm));
 	G4LogicalVolume *TefLog = new G4LogicalVolume(TefSol, matTef, "TefLog");
 	G4PVPlacement *TefPhy = new G4PVPlacement(nullptr, G4ThreeVector(0., 0., 0.), TefLog, "TefPhy", WorldLV, false, 0, true);
+*/
 /*
      //0.5 mm thick aluminum foil that covers the scintillator body + Teflon
 	G4Box *OutFoil =  new G4Box("OutFoil", 26.5 *mm, 26.5 *mm, 751.0 *mm);
@@ -179,7 +181,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 	OpSurface1 -> SetModel(DAVIS);
 	OpSurface1 -> SetFinish(RoughTeflon_LUT);
      */
-     G4double Surf_reflectivity[2] = {0.90, 0.90};
+     G4double Surf_reflectivity[2] = {0.95, 0.95};
      G4MaterialPropertiesTable *SMPT2 = new G4MaterialPropertiesTable();
 	SMPT2 -> AddProperty("REFLECTIVITY", ephoton, Surf_reflectivity, 2);
      OpSurface1 -> SetType(dielectric_dielectric);
